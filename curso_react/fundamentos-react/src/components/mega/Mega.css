@@ -1,0 +1,12 @@
+.Mega input{
+    font: size 1.4rem;
+    width: 50px;;
+}
+.Mega label {
+    margin-right: 10px;
+}
+.Mega p{
+    background-color: blueviolet;
+    color: antiquewhite;
+    border-radius: 50%;
+}
