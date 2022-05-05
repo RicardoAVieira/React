@@ -1,9 +1,10 @@
+import React from 'react'
 import './App.css'
-import React from "react";
 
-const App = props =>(
+const App = props =>
+(
     <div className="App">
-        Componente App
+        Component App
     </div>
 )
 
