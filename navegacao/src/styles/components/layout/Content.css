@@ -1,0 +1,6 @@
+.Content {
+	display: flex;
+	flex-grow: 1; /* Pode ser felx e tambem flex-grow 1, este recebe apenas 1 propriedade */
+    background-color: #ddd;
+    padding: 30px;
+}

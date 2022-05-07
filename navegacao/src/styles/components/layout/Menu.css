@@ -1,0 +1,32 @@
+.Menu {
+	display: flex;
+	flex-basis: 250px; /* Componente utilizado para definir a largura */
+
+	background-color: dodgerblue;
+}
+.Menu nav {
+	flex: 1;
+}
+
+.Menu ul {
+	list-style: none; /* Remove as bolinhas do estilo lista */
+	padding: 0px;
+}
+
+.Menu li {
+	display: flex;
+}
+
+.Menu li a {
+	/* Esta forma de declara passa um caminho em que o elemento precisa estar dentro */
+	flex: 1;
+	margin-bottom: 10px;
+	padding: 10px;
+
+	text-decoration: none; /* Desativar o sublinhado do link */
+	color: white;
+	font-size: 1.5rem;
+}
+.Menu li a:hover {
+	background-color: #00000020;
+}

@@ -1,10 +1,21 @@
-import './App.css'
+import "../../styles/components/layout/Menu.css";
 import React from "react";
 
-const Menu = props =>(
-    <div className="App">
-        Componente App
-    </div>
-)
+import { Link } from "react-router-dom";
 
-export default Menu
+const Menu = (props) => (
+	<div className="Menu">
+		<nav>
+			<ul>
+				<li>
+					<Link to="/">Home</Link>
+				</li>
+				<li>
+					<Link to="/About">Sobre</Link>
+				</li>
+			</ul>
+		</nav>
+	</div>
+);
+
+export default Menu;
