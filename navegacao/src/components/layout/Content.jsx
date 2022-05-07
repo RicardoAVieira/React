@@ -12,6 +12,7 @@ const Content = (props) => (
 		<Routes>
 			<Route path="/About" element={<About />} />
 			<Route path="/param/:id" element={<Param />} />
+			{/* A adição dos : Informan que não se trata de um valor Literal, sim uma variável */}
 			<Route path="/" exact element={<Home />} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>
