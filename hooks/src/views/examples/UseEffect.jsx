@@ -30,6 +30,14 @@ const UseEffect = (props) => {
 		},
 		[fatorial]
 	);
+	useEffect(
+		function () {
+			number % 2 == 0
+				? (document.getElementById("parImpar").innerHTML = "Par")
+				: (document.getElementById("parImpar").innerHTML = "Impar");
+		},
+		[number]
+	);
 
 	return (
 		<div className="UseEffect">
@@ -54,9 +62,12 @@ const UseEffect = (props) => {
 			</div>
 
 			<SectionTitle title="Exercício #02" />
-            <div className="center">
-                
-            </div>
+			<div className="center">
+				<div><div className="text">O numero é:</div>
+				<span className="red">
+					<h1 id="parImpar"></h1>
+				</span></div>
+			</div>
 		</div>
 	);
 };
