@@ -30,7 +30,9 @@ const UseEffect = (props) => {
 		},
 		[fatorial]
 	);
-	useEffect(
+	/* 	
+Minha Resosulçao para o desafio
+useEffect(
 		function () {
 			number % 2 == 0
 				? (document.getElementById("parImpar").innerHTML = "Par")
@@ -39,6 +41,21 @@ const UseEffect = (props) => {
 		[number]
 	);
 
+ */
+
+	//Resolução do professor para o desafio
+	const [status, setStatus] = useState("Impar");
+	useEffect(
+		function () {
+			setStatus(number % 2 === 0 ? "Par" : "Ímpar");
+		},
+		[number]
+	); //Sem definir um item dentro do array de chamadas ele vai executar a cada novo status, causando uso desnecessário.
+
+	/* 
+		Imformação IMPORTANTE
+		Não adicionar um setAlguma coisa no corpo, pois pode desencadear um loop
+	*/
 	return (
 		<div className="UseEffect">
 			<PageTitle
@@ -63,10 +80,18 @@ const UseEffect = (props) => {
 
 			<SectionTitle title="Exercício #02" />
 			<div className="center">
-				<div><div className="text">O numero é:</div>
-				<span className="red">
-					<h1 id="parImpar"></h1>
-				</span></div>
+				<div>
+					{/* Resolução do professor */}
+					<div className="text">
+						<span> O numero é: </span>
+						<span className="red">{status}</span>
+					</div>
+					{/* Minha Resolução do defafio
+						<span className="red">
+							<h1 id="parImpar"></h1> 
+						</span>
+					*/}
+				</div>
 			</div>
 		</div>
 	);
