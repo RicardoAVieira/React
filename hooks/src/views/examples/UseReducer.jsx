@@ -1,5 +1,6 @@
 import React from "react";
-import { useReducer } from "react";
+import { useReducer,useEffect } from "react";
+
 import PageTitle from "../../components/layout/PageTitle";
 
 const inicialState = {
@@ -8,12 +9,21 @@ const inicialState = {
 	user: null,
 	//foco no number....
 	number: 0,
+    
 };
 
 function reducer(state, action) {
 	switch (action.type) {
 		case "add2ToNumber":
 			return { ...state, number: state.number + 2 };
+		case "add7ToNumber":
+			return { ...state, number: state.number * 7 };
+		case "dividePor25":
+			return { ...state, number: state.number / 25 };
+		case "toInt":
+			return { ...state, number: parseInt(state.number) };
+		case "numberAddN":
+			return { ...state, number: state.number + action.payloadN };
 		case "login":
 			return { ...state, user: { name: action.payload } };
 		default:
@@ -23,6 +33,10 @@ function reducer(state, action) {
 
 const UseReducer = (props) => {
 	const [state, dispatch] = useReducer(reducer, inicialState);
+
+
+
+    /* uma que faz um parse e faz o numero para inteiro, adicionar um numero n */
 
 	return (
 		<div className="UseReducer">
@@ -51,6 +65,31 @@ const UseReducer = (props) => {
 					>
 						+2
 					</button>
+					<button
+						className="btn"
+						onClick={() => dispatch({ type: "add7ToNumber" })}
+					>
+						*7
+					</button>
+					<button
+						className="btn"
+						onClick={() => dispatch({ type: "dividePor25" })}
+					>
+						n/25
+					</button>
+					<button
+						className="btn"
+						onClick={() => dispatch({ type: "toInt" })}
+					>
+						toInt
+					</button>
+					<button
+						className="btn"
+						onClick={() => dispatch({ type: "numberAddN", payloadN: -7 })}
+					>
+						CalcN
+					</button>
+                    
 				</div>
 			</div>
 		</div>
