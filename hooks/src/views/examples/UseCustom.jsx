@@ -11,7 +11,9 @@ const UseRef = (props) => {
 
 	function showStates(states) {
 		return states.map((state) => (
-			<li key={state.nome}>{state.nome} - {state.sigla}</li>
+			<li key={state.nome}>
+				{state.nome} - {state.sigla}
+			</li>
 		));
 	}
 
