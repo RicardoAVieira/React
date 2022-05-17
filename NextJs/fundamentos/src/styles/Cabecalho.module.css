@@ -1,0 +1,17 @@
+.Cabecalho {
+    width: 100vw;
+	background-color: grey;
+}
+.Cabecalho header{
+    display: flex;
+	flex-direction: row;
+	background-color: grey;
+}
+
+.Cabecalho a {
+    
+    background-color: crimson;
+    margin: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}

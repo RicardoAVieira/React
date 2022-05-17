@@ -1,5 +1,8 @@
+import Cabecalho from "../components/Cabecalho";
 export default function Home() {
-  return (
-        <h1>Olá</h1>
-  )
+	return (
+		<div>
+			<Cabecalho />
+		</div>
+	);
 }
