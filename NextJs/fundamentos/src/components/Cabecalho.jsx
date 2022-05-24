@@ -7,6 +7,7 @@ export default function Cabecalho(props) {
 			<header>
 				<Link href="/">Home</Link>
 				<Link href="/estiloso">Estiloso</Link>
+				<Link href="/cliente/RS/321">Cliente</Link>
 			</header>
 		</div>
 	);
