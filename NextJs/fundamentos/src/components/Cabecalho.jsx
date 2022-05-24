@@ -8,6 +8,8 @@ export default function Cabecalho(props) {
 				<Link href="/">Home</Link>
 				<Link href="/estiloso">Estiloso</Link>
 				<Link href="/cliente/RS/321">Cliente</Link>
+				<Link href="/estado">Estado</Link>
+				<Link href="/integracao_1">Integra_API#01</Link>
 			</header>
 		</div>
 	);

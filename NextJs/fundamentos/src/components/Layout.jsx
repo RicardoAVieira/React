@@ -6,6 +6,8 @@ export default function Layout(props) {
 		<div className={styles.layout}>
 			<Cabecalho />
 
+			<h1>{props.titulo}</h1>
+
 			<div className={styles.conteudo}>
 				{/* Para acessar os dados enviados do componente  */}
 				{props.children}
